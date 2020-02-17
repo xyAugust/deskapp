@@ -1,0 +1,8 @@
+.drag {
+  -webkit-app-region: drag; 
+}
+
+body {
+  user-select: none;
+  overflow:hidden
+}

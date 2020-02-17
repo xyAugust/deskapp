@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bootstrap 模板</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入 Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/my_bootstrap.css">
+  <script type="text/javascript" src=" "></script>
+
+  <style type="text/css">
+    body {
+      user-select: none;
+    }
+
+    #box::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav {
+      height: 40px;
+    }
+
+    .container {
+      margin-top: 40px;
+    } 
+
+    .bottom-bar {
+      background-position: center;;
+      background-color: #666;
+      text-align: center;
+      height: 20px;
+    } 
+    
+  </style>
+</head>
+
+<body id="box">
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand drag" href="#">Logo</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </li class="size">
+      <button type="button" class="btn btn-default navbar-btn ">
+            导航栏按钮
+        </button>
+    </ul>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>关于我</h2>
+        <h5>我的照片:</h5>
+        <div class="fakeimg">这边插入图像</div>
+        <p>关于我的介绍..</p>
+        <h3>链接</h3>
+        <p>描述文本。</p>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#">链接 1</a></li>
+          <li><a href="#">链接 2</a></li>
+          <li><a href="#">链接 3</a></li>
+        </ul>
+        <hr class="hidden-sm hidden-md hidden-lg">
+      </div>
+      <div class="col-sm-8">
+        <h2>标题</h2>
+        <h5>副标题</h5>
+        <div class="fakeimg">图像</div>
+        <p>一些文本..</p>
+        <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+        <br>
+        <h2>标题</h2>
+        <h5>副标题</h5>
+        <div class="fakeimg">图像</div>
+        <p>一些文本..</p>
+        <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="bottom-bar navbar-dark fixed-bottom">
+      底部内容  
+  </div>
+
+</body>
+
+</html>

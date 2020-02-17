@@ -1,0 +1,89 @@
+<html>
+
+<head>
+   <title>The Material Design Lite Example</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="./css/mdl/material.min.css">
+   <link rel="stylesheet" href="./css/mdl/material.indigo-pink.min.css">
+
+   <script src="./js/mdl/material.min.js"></script>
+   <link rel="stylesheet" href="./css/mdl/Material+Icons.css">
+   <link rel="stylesheet" href="css/my_bootstrap.css">
+
+
+   <style type="text/css">
+      .mdl-button {
+         margin: 0px;
+      }
+   </style>
+</head>
+
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+   <header class="mdl-layout__header">
+     <div class="mdl-layout__header-row">
+       <!-- Title -->
+       <span class="mdl-layout-title">Title</span>
+       <!-- Add spacer, to align navigation to the right -->
+       <div class="mdl-layout-spacer"></div>
+       <!-- Navigation. We hide it in small screens. -->
+       <nav class="mdl-navigation mdl-layout--large-screen-only">
+         <a class="mdl-navigation__link" href="">Link</a>
+         <a class="mdl-navigation__link" href="">Link</a>
+         <a class="mdl-navigation__link" href="">Link</a>
+         <a class="mdl-navigation__link" href="">Link</a>
+       </nav>
+     </div>
+   </header>
+   <div class="mdl-layout__drawer">
+     <span class="mdl-layout-title">Title</span>
+     <nav class="mdl-navigation">
+       <a class="mdl-navigation__link" href="">Link</a>
+       <a class="mdl-navigation__link" href="">Link</a>
+       <a class="mdl-navigation__link" href="">Link</a>
+       <a class="mdl-navigation__link" href="">Link</a>
+     </nav>
+   </div>
+   <main class="mdl-layout__content">
+     <div class="page-content">
+      <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+         <div class="mdl-tabs__tab-bar">
+             <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
+             <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
+             <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
+         </div>
+       
+         <div class="mdl-tabs__panel is-active" id="starks-panel">
+           <ul>
+             <li>Eddard</li>
+             <li>Catelyn</li>
+             <li>Robb</li>
+             <li>Sansa</li>
+             <li>Brandon</li>
+             <li>Arya</li>
+             <li>Rickon</li>
+           </ul>
+         </div>
+         <div class="mdl-tabs__panel" id="lannisters-panel">
+           <ul>
+             <li>Tywin</li>
+             <li>Cersei</li>
+             <li>Jamie</li>
+             <li>Tyrion</li>
+           </ul>
+         </div>
+         <div class="mdl-tabs__panel" id="targaryens-panel">
+           <ul>
+             <li>Viserys</li>
+             <li>Daenerys</li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </main>
+ </div>
+
+</body>
+
+</html>

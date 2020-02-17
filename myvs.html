@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/my_bootstrap.css">
+    <style type="text/css">
+        .nav {
+            display: flex;
+            height: 30px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
+            margin: -8px -8px 0 -8px;
+            background-color: #3c3c3c;
+        }
+
+        .menu {
+            background-color: #3c3c3c;
+            border: none;
+            color: white;
+            padding: 0px 15px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .menu:hover {
+            background-color: #474748;
+        }
+
+        .spacer {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1
+        }
+
+        .window-appicon {
+            width: 35px;
+            height: 100%;
+            position: relative;
+            z-index: 3000;
+            background-image: url(code-icon.svg );
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .resizer {
+            -webkit-app-region: no-drag;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 4px; 
+        }
+
+        .content {
+            margin: 0 -8px 0 -8px;
+            background-color: #1e1e1e;
+            height: 100%;
+        }
+
+        .window-controls {
+            background-color: #3c3c3c;
+            border: none;
+            color: white;
+            padding: 0px 15px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .window-close:hover {
+            background-color: #d61425;
+        }
+
+        .window-max-restore:hover {
+            background-color: #474748;
+        }
+
+        .window-minimize:hover {
+            background-color: #474748;
+        }
+
+        .window-minimize {
+            content: 小;
+        }
+
+        .window-max-restore {
+            content: 大;
+        }
+
+        .window-close {
+            content: 关;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav ">
+        <div class="window-appicon drag"></div>
+        <div class="menu">文件</div>
+        <div class="menu">编辑</div>
+        <div class="menu">选择</div>
+        <div class="menu">查看</div>
+        <div class="spacer drag"></div>
+
+        <div class="window-controls-container">
+            <div id="minbt" class="window-controls window-minimize codicon codicon-chrome-minimize">小</div>
+            <div id="maxbt" class="window-controls window-max-restore codicon codicon-chrome-maximize">大</div>
+            <div id="closebt" class="window-controls window-close codicon codicon-chrome-close">关</div>
+        </div>
+
+    </div>
+    <div class="resizer"></div>
+    <div class="content"></div>
+
+    <script>
+        const {
+            ipcRenderer
+        } = require('electron')
+        document.getElementById('maxbt').addEventListener('click', () => {
+            console.log('hello vscode!')
+            ipcRenderer.send('window-max');
+
+        })
+        document.getElementById('minbt').addEventListener('click', () => {
+            console.log('hello vscode!')
+            ipcRenderer.send('window-min');
+
+        })
+        document.getElementById('closebt').addEventListener('click', () => {
+            console.log('hello vscode!')
+            ipcRenderer.send('window-close');
+
+        })
+    </script>
+</body>
+
+</html>
