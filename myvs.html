@@ -55,7 +55,7 @@
             position: absolute;
             top: 0;
             width: 100%;
-            height: 4px; 
+            height: 4px;
         }
 
         .content {
@@ -101,7 +101,14 @@
         .window-close::before {
             content: '\2715';
         }
- 
+
+        .blur {
+            -webkit-filter: blur(1000px);
+            -moz-filter: blur(1000px);
+            -ms-filter: blur(1000px);
+            filter: blur(1000px);
+            background-color: rgba(125, 209, 87, 0.993);
+        }
     </style>
 </head>
 
@@ -116,14 +123,14 @@
         <div class="spacer drag"></div>
 
         <div class="window-controls-container">
-            <div id="minbt" class="window-controls window-minimize codicon codicon-chrome-minimize"> </div>
-            <div id="maxbt" class="window-controls window-max-restore codicon codicon-chrome-maximize"> </div>
-            <div id="closebt" class="window-controls window-close codicon codicon-chrome-close"> </div>
+            <div id="minbt" class="window-controls window-minimize codicon codicon-chrome-minimize"></div>
+            <div id="maxbt" class="window-controls window-max-restore codicon codicon-chrome-maximize"></div>
+            <div id="closebt" class="window-controls window-close codicon codicon-chrome-close"></div>
         </div>
 
     </div>
     <div class="resizer"></div>
-    <div class="content"></div>
+    <div class="content blur"></div>
 
     <script>
         const {
