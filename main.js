@@ -10,7 +10,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 900,
     height: 600,
-    // transparent: true,
+    transparent: true,
     frame: false,
 
     webPreferences: {
@@ -22,7 +22,7 @@ function createWindow() {
   win.loadFile('myvs.html')
 
   // 打开开发者工具
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 
 
   // 监听窗口变化

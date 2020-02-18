@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/my_bootstrap.css">
     <style type="text/css">
         .nav {
@@ -23,6 +24,7 @@
             font-size: 12px;
             cursor: pointer;
             outline: 0;
+            min-width: 35px;
         }
 
         .menu:hover {
@@ -66,12 +68,12 @@
             background-color: #3c3c3c;
             border: none;
             color: white;
-            padding: 0px 15px;
+            padding: 0px 13px;
             text-align: center;
             line-height: 30px;
             text-decoration: none;
             display: inline-block;
-            font-size: 12px;
+            font-size: 13px;
             cursor: pointer;
             outline: 0;
         }
@@ -88,17 +90,18 @@
             background-color: #474748;
         }
 
-        .window-minimize {
-            content: 小;
+        .window-minimize::before {
+            content: '一';
         }
 
-        .window-max-restore {
-            content: 大;
+        .window-max-restore::before {
+            content: '二';
         }
 
-        .window-close {
-            content: 关;
+        .window-close::before {
+            content: '\2715';
         }
+ 
     </style>
 </head>
 
@@ -113,9 +116,9 @@
         <div class="spacer drag"></div>
 
         <div class="window-controls-container">
-            <div id="minbt" class="window-controls window-minimize codicon codicon-chrome-minimize">小</div>
-            <div id="maxbt" class="window-controls window-max-restore codicon codicon-chrome-maximize">大</div>
-            <div id="closebt" class="window-controls window-close codicon codicon-chrome-close">关</div>
+            <div id="minbt" class="window-controls window-minimize codicon codicon-chrome-minimize"> </div>
+            <div id="maxbt" class="window-controls window-max-restore codicon codicon-chrome-maximize"> </div>
+            <div id="closebt" class="window-controls window-close codicon codicon-chrome-close"> </div>
         </div>
 
     </div>
