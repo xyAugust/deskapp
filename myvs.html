@@ -102,14 +102,22 @@
             content: '\2715';
         }
 
+        #text {
+            color: aliceblue;
+
+        }
+
         .blur {
-            -webkit-filter: blur(1000px);
+            /* -webkit-filter: blur(1000px);
             -moz-filter: blur(1000px);
             -ms-filter: blur(1000px);
-            filter: blur(1000px);
-            background-color: rgba(125, 209, 87, 0.993);
+            filter: blur(1000px); 
+            background-color: rgba(28, 29, 27, 0.993);*/
         }
     </style>
+    <script>
+
+    </script>
 </head>
 
 <body>
@@ -130,27 +138,35 @@
 
     </div>
     <div class="resizer"></div>
-    <div class="content blur"></div>
 
+    <div class="content blur">
+        <div id="text"></div>
+    </div>
+
+    <script src="js/renderer.js"></script>
     <script>
-        const {
-            ipcRenderer
-        } = require('electron')
-        document.getElementById('maxbt').addEventListener('click', () => {
-            console.log('hello vscode!')
-            ipcRenderer.send('window-max');
+        const spawn = require('child_process').spawn
+        var childProcess = spawn('adb', ['devices']); 
+        // var childProcess = spawn('calc'); 
+        childProcess.stdout.on('data', (data) => {
+            console.log("" + data);
+            document.getElementById("text").innerHTML = data.toString();
+        });  
 
-        })
-        document.getElementById('minbt').addEventListener('click', () => {
-            console.log('hello vscode!')
-            ipcRenderer.send('window-min');
+        // var exec = require('child_process').exec;
+        // // var cmdStr = 'curl http://www.weather.com.cn/data/sk/101180901.html'; 
+        // var cmdStr = 'adb devices';
+        // document.getElementById("text").innerHTML = cmdStr;
+        // exec(cmdStr, function (err, stdout, stderr) {
+        //     if (err) {
+        //         console.log('get weather api error:' + stderr);
+        //         document.getElementById("text").innerHTML = stderr.toString();
+        //     } else {
+        //         var data = JSON.parse(stdout.toString());
+        //         document.getElementById("text").innerHTML = stdout.toString();
+        //     }
 
-        })
-        document.getElementById('closebt').addEventListener('click', () => {
-            console.log('hello vscode!')
-            ipcRenderer.send('window-close');
-
-        })
+        // });
     </script>
 </body>
 

@@ -10,7 +10,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 900,
     height: 600,
-    transparent: true,
+    // transparent: true,
     frame: false,
 
     webPreferences: {
